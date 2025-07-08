@@ -1,0 +1,38 @@
+ /* assets/css/global.css */
+
+/* Import the Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Define custom CSS variables for JesLights brand colors */
+:root {
+    --color-primary-orange: #F2994A;
+    --color-primary-green: #27AE60;
+    --color-primary-blue: #2C3E50;
+    --color-accent-orange: #FFB366;
+    --color-accent-green: #2ECC71;
+    --color-neutral-background: #F8F8F8;
+    --color-text-dark: #333333;
+}
+
+/* Base body styles, ensuring Inter font is applied and a default background/text color */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-neutral-background);
+    color: var(--color-text-dark);
+    line-height: 1.6; /* Improve readability */
+    -webkit-font-smoothing: antialiased; /* Smoother font rendering */
+    -moz-osx-font-smoothing: grayscale; /* Smoother font rendering */
+}
+
+/* General utility classes or overrides if needed */
+/* For example, if you want a consistent focus outline */
+*:focus {
+    outline: 2px solid var(--color-primary-orange);
+    outline-offset: 2px;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+

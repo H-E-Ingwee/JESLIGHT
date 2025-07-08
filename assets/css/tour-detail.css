@@ -1,0 +1,81 @@
+/* assets/css/tour-detail.css */
+
+/*
+    This file is for styles specific to the tour-detail.html page.
+    It can be used for layout adjustments, gallery styling, or any
+    unique visual elements on this page.
+*/
+
+/* Custom styling for Glide.js arrows and bullets */
+.glide__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 9999px; /* Full rounded */
+    padding: 0.75rem; /* Tailwind p-3 */
+    transition: background-color 0.3s ease;
+    z-index: 10; /* Ensure arrows are above images */
+}
+
+.glide__arrow:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.glide__arrow--left {
+    left: 1rem; /* Tailwind left-4 */
+}
+
+.glide__arrow--right {
+    right: 1rem; /* Tailwind right-4 */
+}
+
+.glide__bullets {
+    position: absolute;
+    bottom: 1rem; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem; /* Space between bullets */
+    z-index: 10;
+}
+
+.glide__bullet {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 0.75rem; /* Tailwind w-3 */
+    height: 0.75rem; /* Tailwind h-3 */
+    border-radius: 9999px; /* Full rounded */
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.glide__bullet--active {
+    background-color: var(--color-primary-orange);
+    border-color: var(--color-primary-orange);
+}
+
+/* Itinerary item styling for accordion effect or visual separation */
+.itinerary-item {
+    transition: background-color 0.3s ease;
+}
+
+.itinerary-item:hover {
+    background-color: var(--color-gray-100);
+}
+
+/* Styling for the sticky sidebar on larger screens */
+@media (min-width: 1024px) { /* Tailwind's 'lg' breakpoint */
+    .h-fit.sticky {
+        top: 6rem; /* Adjust based on your fixed header height */
+    }
+}
+
+/* Basic styling for the packing list output */
+#packing-list-output ul {
+    padding-left: 1.5rem; /* Indent list items */
+}
+
+#packing-list-output ul li {
+    margin-bottom: 0.5rem;
+}

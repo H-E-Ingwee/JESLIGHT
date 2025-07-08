@@ -1,0 +1,21 @@
+/* assets/css/booking-form.css */
+
+/*
+    This file is for styles specific to the booking-form.html page.
+    Use it for unique form styling or layout adjustments.
+*/
+
+/* Custom focus styles for form inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    border-color: transparent; /* Remove default border */
+    box-shadow: 0 0 0 3px rgba(242, 153, 74, 0.5); /* Primary orange ring */
+}
+
+/* Style for the checkbox */
+/* Custom checkmark color if needed, otherwise Tailwind handles */
+/* accent-color: var(--color-primary-orange); */

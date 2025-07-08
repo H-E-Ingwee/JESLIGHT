@@ -1,0 +1,27 @@
+ /* assets/css/booking-confirm.css */
+
+/*
+    This file is for styles specific to the booking-confirm.html page.
+    Use it for layout adjustments or visual enhancements for the booking summary.
+*/
+
+/* Example: Subtle styling for the price breakdown box */
+.price-breakdown-box {
+    border: 1px solid var(--color-gray-200);
+    background-color: var(--color-gray-50);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Styling for the payment gateway icons */
+.payment-icons i {
+    color: var(--color-gray-500); /* Default icon color */
+    transition: color 0.3s ease;
+}
+
+.payment-icons i.fa-cc-visa:hover { color: #1A2B6D; /* Visa blue */ }
+.payment-icons i.fa-cc-mastercard:hover { color: #EB001B; /* Mastercard red */ }
+.payment-icons i.fa-cc-paypal:hover { color: #003087; /* PayPal blue */ }
+.payment-icons i.fa-lock { color: var(--color-primary-green); } /* Lock icon always green */
+

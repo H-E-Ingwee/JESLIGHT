@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JesLights Tours & Travel - Your East African Adventure Awaits</title>
+    <meta name="description" content="Discover unforgettable adventures in East Africa with JesLights Tours & Travel. We offer budget safaris, cultural tours, sustainable travel, beach holidays, and thrilling game drives. Book your dream trip today!">
+    <meta name="keywords" content="East Africa tours, safari, cultural tours, beach holidays, sustainable travel, budget safari, Kenya safari, Tanzania tours, Uganda adventure, wildlife viewing, African travel, tour packages, JesLights, travel deals, adventure travel">
+    <meta name="author" content="JesLights Tours & Travel">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jeslightstours.com/"> <!-- Replace with actual URL -->
+    <meta property="og:title" content="JesLights Tours & Travel - Your East African Adventure Awaits">
+    <meta property="og:description" content="Discover unforgettable adventures in East Africa with JesLights Tours & Travel. We offer budget safaris, cultural tours, sustainable travel, beach holidays, and thrilling game drives.">
+    <meta property="og:image" content="https://placehold.co/1200x630/F2994A/ffffff?text=JesLights+Adventure"> <!-- Placeholder image for social sharing -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jeslightstours.com/"> <!-- Replace with actual URL -->
+    <meta property="twitter:title" content="JesLights Tours & Travel - Your East African Adventure Awaits">
+    <meta property="twitter:description" content="Discover unforgettable adventures in East Africa with JesLights Tours & Travel. We offer budget safaris, cultural tours, sustainable travel, beach holidays, and thrilling game drives.">
+    <meta property="twitter:image" content="https://placehold.co/1200x675/27AE60/ffffff?text=East+Africa+Adventure"> <!-- Placeholder image for social sharing -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Preload critical resources (adjust paths if needed) -->
+    <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/css/global.css" as="style">
+    <link rel="preload" href="assets/js/global.js" as="script">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind CSS configuration to extend theme with custom colors and font
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            orange: '#F2994A',
+                            green: '#27AE60',
+                            blue: '#2C3E50',
+                        },
+                        accent: {
+                            orange: '#FFB366', /* Brighter orange for hover/accent */
+                            green: '#2ECC71', /* Brighter green for hover/accent */
+                        },
+                        gray: { /* Customizing Tailwind's gray palette for consistency */
+                            50: '#F8F8F8', /* Neutral Background */
+                            100: '#F3F4F6',
+                            200: '#E5E7EB',
+                            300: '#D1D5DB',
+                            400: '#9CA3AF',
+                            500: '#6B7280',
+                            600: '#4B5563',
+                            700: '#374151',
+                            800: '#1F2937',
+                            900: '#111827',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    // Define custom animations directly in Tailwind config
+                    animation: {
+                        fadeInUp: 'fadeInUp 1s ease-out forwards',
+                        bounce: 'bounce 2s infinite',
+                        pulseFast: 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite', // For quick pulse
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: 0, transform: 'translateY(20px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                        },
+                        bounce: {
+                            '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
+                            '40%': { transform: 'translateY(-10px)' },
+                            '60%': { transform: 'translateY(-5px)' },
+                        },
+                        pulse: {
+                            '0%, 100%': { opacity: 1 },
+                            '50%': { opacity: .5 },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Glide.js CSS for Testimonial Slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.min.css">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-primary-blue text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- Using a placeholder for the logo -->
+                <img src="https://placehold.co/40x40/F2994A/ffffff?text=JL" alt="JesLights Tours & Travel Logo" class="h-10 rounded-full lazy" loading="lazy">
+                <span class="text-xl font-semibold">JesLights Tours & Travel</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="hover:text-primary-orange transition duration-300">Home</a>
+                <a href="pages/tours.html" class="hover:text-primary-orange transition duration-300">Tours</a>
+                <a href="pages/about.html" class="hover:text-primary-orange transition duration-300">About Us</a>
+                <a href="pages/contact.html" class="hover:text-primary-orange transition duration-300">Contact</a>
+                <a href="pages/booking-form.html" class="bg-primary-orange hover:bg-accent-orange px-4 py-2 rounded-md transition duration-300 shadow-md transform hover:scale-105">Book Now</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary-blue pb-4 px-4">
+            <a href="index.html" class="block py-2 hover:text-primary-orange transition duration-300">Home</a>
+            <a href="pages/tours.html" class="block py-2 hover:text-primary-orange transition duration-300">Tours</a>
+            <a href="pages/about.html" class="block py-2 hover:text-primary-orange transition duration-300">About Us</a>
+            <a href="pages/contact.html" class="block py-2 hover:text-primary-orange transition duration-300">Contact</a>
+            <a href="pages/booking-form.html" class="block mt-2 bg-primary-orange hover:bg-accent-orange px-4 py-2 rounded-md text-center transition duration-300 shadow-md">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen max-h-[800px] flex items-center justify-center bg-cover bg-center rounded-b-xl shadow-lg hero-section" 
+             style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://placehold.co/1920x1080/2C3E50/ffffff?text=Hero+Placeholder');">
+        <!-- Lazy-loaded hero image - actual image will replace placeholder -->
+        <img src="https://placehold.co/1920x1080/2C3E50/ffffff?text=Hero+Placeholder" 
+             data-src="https://placehold.co/1920x1080/2C3E50/ffffff?text=Your+Adventure+Awaits" 
+             alt="Vast East African Landscape" 
+             class="lazy absolute inset-0 w-full h-full object-cover -z-10">
+        <div class="absolute inset-0 bg-black opacity-40 rounded-b-xl -z-10"></div>
+        
+        <div class="container mx-auto px-4 z-10 text-center text-white animate-fadeInUp">
+            <!-- Special Offer Badge -->
+            <div class="bg-primary-orange text-white inline-block px-4 py-2 rounded-full mb-6 animate-bounce">
+                <span class="font-bold">LIMITED TIME:</span> 15% Off Early Bird Bookings
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">
+                Your <span class="text-primary-orange">East African</span> Adventure Awaits
+            </h1>
+            
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90 drop-shadow-md">
+                Discover breathtaking landscapes, rich cultures, and unforgettable wildlife experiences
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="pages/tours.html" 
+                   class="bg-primary-orange hover:bg-accent-orange text-white px-8 py-4 rounded-full font-bold transition duration-300 shadow-xl transform hover:scale-105">
+                    Explore Tours
+                </a>
+                <a href="#featured" 
+                   class="bg-transparent border-2 border-white hover:bg-white hover:text-primary-blue px-8 py-4 rounded-full font-bold transition duration-300 shadow-xl transform hover:scale-105">
+                    Featured Adventures
+                </a>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <a href="#featured" class="text-white text-4xl" aria-label="Scroll down to featured tours">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tours -->
+    <section id="featured" class="py-16 bg-white rounded-xl shadow-lg mx-auto container mb-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-4">
+                    Our <span class="text-primary-orange">Featured</span> Adventures
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Handpicked experiences showcasing the best of East Africa
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tour 1 - Enhanced Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <!-- Badge -->
+                    <div class="absolute top-4 right-4 bg-primary-green text-white px-3 py-1 rounded-full text-xs font-bold z-10">
+                        POPULAR
+                    </div>
+                    
+                    <!-- Image with overlay -->
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://placehold.co/600x400/D1D5DB/6B7280?text=Tour+Placeholder" data-src="https://placehold.co/600x400/27AE60/ffffff?text=Safari+Adventure" alt="Budget Safari Adventure" 
+                             class="lazy w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <span class="bg-primary-orange text-white text-xs px-2 py-1 rounded-full">5 days</span>
+                            <span class="bg-primary-blue text-white text-xs px-2 py-1 rounded-full ml-2">Small Group</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-primary-blue">Budget Safari Adventure</h3>
+                            <span class="text-primary-orange font-bold text-lg">$899</span>
+                        </div>
+                        
+                        <!-- Rating -->
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-primary-orange">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm ml-2">(24 reviews)</span>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-4 line-clamp-2">
+                            Experience the wild beauty of East Africa's national parks without breaking the bank. Perfect for adventurous travelers.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-xs flex items-center">
+                                <i class="fas fa-paw mr-1 text-primary-orange"></i> Wildlife
+                            </span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-xs flex items-center">
+                                <i class="fas fa-camera mr-1 text-primary-orange"></i> Photography
+                            </span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-xs flex items-center">
+                                <i class="fas fa-users mr-1 text-primary-orange"></i> Cultural
+                            </span>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <a href="pages/tour-detail.html?id=1" 
+                               class="text-primary-blue hover:text-accent-orange font-medium flex items-center transition">
+                                View Details <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                            </a>
+                            <button class="text-primary-orange hover:text-accent-orange transition" aria-label="Add to wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tour 2 - Enhanced Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <!-- Badge -->
+                    <div class="absolute top-4 right-4 bg-primary-blue text-white px-3 py-1 rounded-full text-xs font-bold z-10">
+                        NEW
+                    </div>
+                    
+                    <!-- Image with overlay -->
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://placehold.co/600x400/D1D5DB/6B7280?text=Tour+Placeholder" data-src="https://placehold.co/600x400/F2994A/ffffff?text=Cultural+Journey" alt="Cultural Experience Tour" 
+                             class="lazy w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <span class="bg-primary-orange text-white text-xs px-2 py-1 rounded-full">7 days</span>
+                            <span class="bg-primary-blue text-white text-xs px-2 py-1 rounded-full ml-2">Family Friendly</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-primary-blue">Authentic Cultural Journey</h3>
+                            <span class="text-primary-orange font-bold text-lg">$699</span>
+                        </div>
+                        
+                        <!-- Rating -->
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-primary-orange">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm ml-2">(18 reviews)</span>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-4 line-clamp-2">
+                            Immerse yourself in the rich traditions and daily life of East African communities with authentic experiences.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-xs flex items-center">
+                                <i class="fas fa-utensils mr-1 text-primary-orange"></i> Local Cuisine
+                            </span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-xs flex items-center">
+                                <i class="fas fa-home mr-1 text-primary-orange"></i> Village Stays
+                            </span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-xs flex items-center">
+                                <i class="fas fa-hands-helping mr-1 text-primary-orange"></i> Community
+                            </span>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <a href="pages/tour-detail.html?id=2" 
+                               class="text-primary-blue hover:text-accent-orange font-medium flex items-center transition">
+                                View Details <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                            </a>
+                            <button class="text-primary-orange hover:text-accent-orange transition" aria-label="Add to wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tour 3 - Enhanced Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <!-- Image with overlay -->
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://placehold.co/600x400/D1D5DB/6B7280?text=Tour+Placeholder" data-src="https://placehold.co/600x400/2C3E50/ffffff?text=Beach+Holiday" alt="Beach Holiday Tour" 
+                             class="lazy w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <span class="bg-primary-orange text-white text-xs px-2 py-1 rounded-full">6 days</span>
+                            <span class="bg-primary-blue text-white text-xs px-2 py-1 rounded-full ml-2">Luxury</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-primary-blue">Relaxing Beach Escape</h3>
+                            <span class="text-primary-orange font-bold text-lg">$799</span>
+                        </div>
+                        
+                        <!-- Rating -->
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-primary-orange">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm ml-2">(32 reviews)</span>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-4 line-clamp-2">
+                            Relax on pristine beaches and enjoy the crystal-clear waters of the Indian Ocean at luxury resorts.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-xs flex items-center">
+                                <i class="fas fa-umbrella-beach mr-1 text-primary-orange"></i> Beachfront
+                            </span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-xs flex items-center">
+                                <i class="fas fa-swimmer mr-1 text-primary-orange"></i> Snorkeling
+                            </span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-xs flex items-center">
+                                <i class="fas fa-spa mr-1 text-primary-orange"></i> Spa
+                            </span>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <a href="pages/tour-detail.html?id=3" 
+                               class="text-primary-blue hover:text-accent-orange font-medium flex items-center transition">
+                                View Details <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                            </a>
+                            <button class="text-primary-orange hover:text-accent-orange transition" aria-label="Add to wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="pages/tours.html" 
+                   class="inline-block bg-primary-blue hover:bg-gray-700 text-white px-8 py-4 rounded-full font-bold transition duration-300 shadow-md transform hover:scale-105">
+                    View All Tours
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Tour Categories Section (retained from previous version) -->
+    <section class="py-16 bg-gray-100 rounded-xl shadow-lg mx-auto container mb-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-primary-blue mb-12">Popular Tour Categories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Category Card 1: Safari -->
+                <a href="pages/tours.html?type=safari" class="block group relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/D1D5DB/6B7280?text=Category+Placeholder" data-src="https://placehold.co/600x400/27AE60/ffffff?text=Safari" alt="Safari Tours" class="lazy w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <h3 class="text-3xl font-bold text-white text-center drop-shadow-lg">Safari Adventures</h3>
+                    </div>
+                </a>
+                <!-- Category Card 2: Beach -->
+                <a href="pages/tours.html?type=beach" class="block group relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/D1D5DB/6B7280?text=Category+Placeholder" data-src="https://placehold.co/600x400/F2994A/ffffff?text=Beach" alt="Beach Holidays" class="lazy w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <h3 class="text-3xl font-bold text-white text-center drop-shadow-lg">Beach Holidays</h3>
+                    </div>
+                </a>
+                <!-- Category Card 3: Cultural -->
+                <a href="pages/tours.html?type=cultural" class="block group relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/D1D5DB/6B7280?text=Category+Placeholder" data-src="https://placehold.co/600x400/2C3E50/ffffff?text=Cultural" alt="Cultural Tours" class="lazy w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <h3 class="text-3xl font-bold text-white text-center drop-shadow-lg">Cultural Journeys</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-white rounded-xl shadow-lg mx-auto container mb-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-4">
+                    Why Choose <span class="text-primary-orange">JesLights</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    We go the extra mile to make your East African adventure unforgettable
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 - Interactive -->
+                <div class="bg-white rounded-xl p-8 text-center shadow-sm hover:shadow-md transition-all duration-300 group">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-primary-orange bg-opacity-10 rounded-full flex items-center justify-center text-primary-orange text-3xl transition-all duration-300 group-hover:bg-primary-orange group-hover:text-white">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary-blue">Local Community Support</h3>
+                    <p class="text-gray-600 mb-4">
+                        20% of profits go directly to community projects in areas we visit.
+                    </p>
+                    <a href="pages/about.html#community" class="text-primary-orange text-sm font-medium hover:text-accent-orange transition flex items-center justify-center mx-auto">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+                
+                <!-- Feature 2 - Interactive -->
+                <div class="bg-white rounded-xl p-8 text-center shadow-sm hover:shadow-md transition-all duration-300 group">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-primary-green bg-opacity-10 rounded-full flex items-center justify-center text-primary-green text-3xl transition-all duration-300 group-hover:bg-primary-green group-hover:text-white">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary-blue">Eco-Friendly Travel</h3>
+                    <p class="text-gray-600 mb-4">
+                        Carbon-neutral tours with plastic-free initiatives and eco-lodges.
+                    </p>
+                    <a href="pages/about.html#sustainability" class="text-primary-green text-sm font-medium hover:text-accent-green transition flex items-center justify-center mx-auto">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+                
+                <!-- Feature 3 - Interactive -->
+                <div class="bg-white rounded-xl p-8 text-center shadow-sm hover:shadow-md transition-all duration-300 group">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-primary-blue bg-opacity-10 rounded-full flex items-center justify-center text-primary-blue text-3xl transition-all duration-300 group-hover:bg-primary-blue group-hover:text-white">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary-blue">Expert Guides</h3>
+                    <p class="text-gray-600 mb-4">
+                        Our guides average 10+ years of experience and extensive local knowledge.
+                    </p>
+                    <a href="pages/about.html#team" class="text-primary-blue text-sm font-medium hover:text-gray-700 transition flex items-center justify-center mx-auto">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+                
+                <!-- Feature 4 - Interactive -->
+                <div class="bg-white rounded-xl p-8 text-center shadow-sm hover:shadow-md transition-all duration-300 group">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-primary-orange bg-opacity-10 rounded-full flex items-center justify-center text-primary-orange text-3xl transition-all duration-300 group-hover:bg-primary-orange group-hover:text-white">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary-blue">24/7 Support</h3>
+                    <p class="text-gray-600 mb-4">
+                        Dedicated support team available throughout your journey.
+                    </p>
+                    <a href="pages/contact.html" class="text-primary-orange text-sm font-medium hover:text-accent-orange transition flex items-center justify-center mx-auto">
+                        Learn more <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Stats Counter -->
+            <div class="mt-16 bg-primary-blue rounded-xl p-8 text-white">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold mb-2 counter" data-target="12500">0</div>
+                        <div class="text-sm uppercase tracking-wider">Happy Travelers</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold mb-2 counter" data-target="87">0</div>
+                        <div class="text-sm uppercase tracking-wider">Tour Packages</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold mb-2 counter" data-target="24">0</div>
+                        <div class="text-sm uppercase tracking-wider">Years Experience</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold mb-2 counter" data-target="98">0</div>
+                        <div class="text-sm uppercase tracking-wider">Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-100 rounded-xl shadow-lg mx-auto container mb-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-4">
+                    Travelers <span class="text-primary-orange">Love Us</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Don't just take our word for it - hear from our happy adventurers
+                </p>
+            </div>
+            
+            <!-- Testimonial Slider -->
+            <div class="glide testimonial-slider">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <!-- Testimonial 1 -->
+                        <li class="glide__slide">
+                            <div class="bg-white p-8 rounded-xl h-full shadow-md">
+                                <div class="flex items-center mb-4">
+                                    <div class="flex text-primary-orange text-2xl mr-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="text-gray-500 text-sm">2 weeks ago</span>
+                                </div>
+                                <p class="text-gray-700 mb-6 text-lg italic">
+                                    "This budget safari exceeded all my expectations! We saw all the Big Five and our guide was incredibly knowledgeable. The accommodations were basic but clean and comfortable. Excellent value for money!"
+                                </p>
+                                <div class="flex items-center">
+                                    <img src="https://placehold.co/48x48/D1D5DB/6B7280?text=SM" data-src="https://placehold.co/48x48/D1D5DB/6B7280?text=SM" alt="Sarah M." class="lazy w-12 h-12 rounded-full object-cover mr-4">
+                                    <div>
+                                        <h4 class="font-semibold text-primary-blue">Sarah M.</h4>
+                                        <p class="text-sm text-gray-500">Canada • Budget Safari Adventure</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- Testimonial 2 -->
+                        <li class="glide__slide">
+                            <div class="bg-white p-8 rounded-xl h-full shadow-md">
+                                <div class="flex items-center mb-4">
+                                    <div class="flex text-primary-orange text-2xl mr-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="text-gray-500 text-sm">1 month ago</span>
+                                </div>
+                                <p class="text-gray-700 mb-6 text-lg italic">
+                                    "The cultural tour gave us such an authentic experience. We felt welcomed by every community we visited. Our guide's knowledge of local traditions made all the difference."
+                                </p>
+                                <div class="flex items-center">
+                                    <img src="https://placehold.co/48x48/D1D5DB/6B7280?text=JL" data-src="https://placehold.co/48x48/D1D5DB/6B7280?text=JL" alt="James L." class="lazy w-12 h-12 rounded-full object-cover mr-4">
+                                    <div>
+                                        <h4 class="font-semibold text-primary-blue">James L.</h4>
+                                        <p class="text-sm text-gray-500">UK • Cultural Experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- Testimonial 3 -->
+                        <li class="glide__slide">
+                            <div class="bg-white p-8 rounded-xl h-full shadow-md">
+                                <div class="flex items-center mb-4">
+                                    <div class="flex text-primary-orange text-2xl mr-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="text-gray-500 text-sm">3 weeks ago</span>
+                                </div>
+                                <p class="text-gray-700 mb-6 text-lg italic">
+                                    "Our beach holiday was perfectly organized. The locations were breathtaking and the service impeccable. We'll definitely book with JesLights again for our next African adventure!"
+                                </p>
+                                <div class="flex items-center">
+                                    <img src="https://placehold.co/48x48/D1D5DB/6B7280?text=MK" data-src="https://placehold.co/48x48/D1D5DB/6B7280?text=MK" alt="Maria K." class="lazy w-12 h-12 rounded-full object-cover mr-4">
+                                    <div>
+                                        <h4 class="font-semibold text-primary-blue">Maria K.</h4>
+                                        <p class="text-sm text-gray-500">Germany • Beach Holiday Escape</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md hover:bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center transition z-10" data-glide-dir="<" aria-label="Previous testimonial">
+                        <i class="fas fa-chevron-left text-primary-blue"></i>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md hover:bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center transition z-10" data-glide-dir=">" aria-label="Next testimonial">
+                        <i class="fas fa-chevron-right text-primary-blue"></i>
+                    </button>
+                </div>
+                
+                <div class="glide__bullets" data-glide-el="controls[nav]" class="mt-4">
+                    <button class="glide__bullet" data-glide-dir="=0" aria-label="Go to slide 1"></button>
+                    <button class="glide__bullet" data-glide-dir="=1" aria-label="Go to slide 2"></button>
+                    <button class="glide__bullet" data-glide-dir="=2" aria-label="Go to slide 3"></button>
+                </div>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 items-center max-w-4xl mx-auto">
+                <div class="text-center opacity-70 hover:opacity-100 transition">
+                    <img src="https://placehold.co/100x40/D1D5DB/6B7280?text=Badge" data-src="https://placehold.co/100x40/D1D5DB/6B7280?text=TripAdvisor" alt="TripAdvisor Excellence" class="lazy h-12 mx-auto" loading="lazy">
+                </div>
+                <div class="text-center opacity-70 hover:opacity-100 transition">
+                    <img src="https://placehold.co/100x40/D1D5DB/6B7280?text=Badge" data-src="https://placehold.co/100x40/D1D5DB/6B7280?text=Sustainable" alt="Sustainable Travel Certified" class="lazy h-12 mx-auto" loading="lazy">
+                </div>
+                <div class="text-center opacity-70 hover:opacity-100 transition">
+                    <img src="https://placehold.co/100x40/D1D5DB/6B7280?text=Badge" data-src="https://placehold.co/100x40/D1D5DB/6B7280?text=Local+Award" alt="Local Business Award" class="lazy h-12 mx-auto" loading="lazy">
+                </div>
+                <div class="text-center opacity-70 hover:opacity-100 transition">
+                    <img src="https://placehold.co/100x40/D1D5DB/6B7280?text=Badge" data-src="https://placehold.co/100x40/D1D5DB/6B7280?text=Safe+Travels" alt="Safe Travels Certified" class="lazy h-12 mx-auto" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-primary-orange text-white rounded-xl shadow-lg mx-auto container mb-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready for Your East African Adventure?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Contact us today to start planning your dream vacation with our expert team.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="pages/tours.html" class="bg-white text-primary-orange hover:bg-gray-100 px-8 py-4 rounded-full font-bold transition duration-300 shadow-md transform hover:scale-105">
+                    Explore Tours
+                </a>
+                <a href="pages/contact.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary-orange px-8 py-4 rounded-full font-bold transition duration-300 shadow-md transform hover:scale-105">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-blue text-white py-12 rounded-t-xl">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://placehold.co/60x60/F2994A/ffffff?text=JL" alt="JesLights Tours & Travel Logo" class="h-12 mb-4 rounded-full lazy" loading="lazy">
+                    <p class="mb-4 text-gray-300">Your trusted partner for unforgettable East African adventures.</p>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="#" class="hover:text-primary-orange transition duration-300" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Home</a></li>
+                        <li><a href="pages/tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Tours</a></li>
+                        <li><a href="pages/about.html" class="hover:text-primary-orange transition duration-300 text-gray-300">About Us</a></li>
+                        <li><a href="pages/contact.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Tour Types</h3>
+                    <ul class="space-y-2">
+                        <li><a href="pages/tours.html?type=safari" class="hover:text-primary-orange transition duration-300 text-gray-300">Budget Safari</a></li>
+                        <li><a href="pages/tours.html?type=cultural" class="hover:text-primary-orange transition duration-300 text-gray-300">Cultural Tours</a></li>
+                        <li><a href="pages/tours.html?type=beach" class="hover:text-primary-orange transition duration-300 text-gray-300">Beach Holidays</a></li>
+                        <li><a href="pages/tours.html?type=game" class="hover:text-primary-orange transition duration-300 text-gray-300">Game Drives</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-primary-orange"></i>
+                            <span>123 Safari Street, Nairobi, Kenya</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-primary-orange"></i>
+                            <span>+254 700 123 456</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-primary-orange"></i>
+                            <span>info@jeslights.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 JesLights Tours & Travel. All rights reserved.</p>
+                <div class="mt-2">
+                    <a href="#" class="hover:text-primary-orange transition">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-primary-orange transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JavaScript -->
+    <script src="assets/js/global.js"></script>
+    <!-- Glide.js for Testimonial Slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js"></script>
+    <!-- Homepage Specific JavaScript -->
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

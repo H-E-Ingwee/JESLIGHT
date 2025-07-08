@@ -1,0 +1,312 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - JesLights Tours & Travel</title>
+    <meta name="description" content="Get in touch with JesLights Tours & Travel. Send us a message, find our contact details, and connect on social media for your East African adventure inquiries.">
+    <meta name="keywords" content="contact JesLights, JesLights phone, JesLights email, travel inquiry, East Africa contact, tour support, contact form, FAQ">
+    <meta name="author" content="JesLights Tours & Travel">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jeslightstours.com/pages/contact.html"> <!-- Replace with actual URL -->
+    <meta property="og:title" content="Contact Us - JesLights Tours & Travel">
+    <meta property="og:description" content="Get in touch with JesLights Tours & Travel. Send us a message, find our contact details, and connect on social media.">
+    <meta property="og:image" content="https://placehold.co/1200x630/27AE60/ffffff?text=Contact+JesLights"> <!-- Placeholder for social sharing image -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jeslightstours.com/pages/contact.html"> <!-- Replace with actual URL -->
+    <meta property="twitter:title" content="Contact Us - JesLights Tours & Travel">
+    <meta property="twitter:description" content="Get in touch with JesLights Tours & Travel. Send us a message, find our contact details, and connect on social media.">
+    <meta property="twitter:image" content="https://placehold.co/1200x675/F2994A/ffffff?text=JesLights+Contact"> <!-- Placeholder for social sharing image -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind CSS configuration to extend theme with custom colors and font
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            orange: '#F2994A',
+                            green: '#27AE60',
+                            blue: '#2C3E50',
+                        },
+                        accent: {
+                            orange: '#FFB366',
+                            green: '#2ECC71',
+                        },
+                        gray: {
+                            50: '#F8F8F8',
+                            100: '#F3F4F6',
+                            200: '#E5E7EB',
+                            300: '#D1D5DB',
+                            400: '#9CA3AF',
+                            500: '#6B7280',
+                            600: '#4B5563',
+                            700: '#374151',
+                            800: '#1F2937',
+                            900: '#111827',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation (re-used from index.html, adjusted paths) -->
+    <nav class="bg-primary-blue text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/F2994A/ffffff?text=JL" alt="JesLights Tours & Travel Logo" class="h-10 rounded-full">
+                <span class="text-xl font-semibold">JesLights Tours & Travel</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="../index.html" class="hover:text-primary-orange transition duration-300">Home</a>
+                <a href="tours.html" class="hover:text-primary-orange transition duration-300">Tours</a>
+                <a href="about.html" class="hover:text-primary-orange transition duration-300">About Us</a>
+                <a href="contact.html" class="hover:text-primary-orange transition duration-300">Contact</a>
+                <a href="booking-confirm.html" class="bg-primary-orange hover:bg-accent-orange px-4 py-2 rounded-md transition duration-300 shadow-md">Book Now</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary-blue pb-4 px-4">
+            <a href="../index.html" class="block py-2 hover:text-primary-orange transition duration-300">Home</a>
+            <a href="tours.html" class="block py-2 hover:text-primary-orange transition duration-300">Tours</a>
+            <a href="about.html" class="block py-2 hover:text-primary-orange transition duration-300">About Us</a>
+            <a href="contact.html" class="block py-2 hover:text-primary-orange transition duration-300">Contact</a>
+            <a href="booking-confirm.html" class="block mt-2 bg-primary-orange hover:bg-accent-orange px-4 py-2 rounded-md text-center transition duration-300 shadow-md">Book Now</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8 mb-16">
+        <!-- Hero Section for Contact Page -->
+        <section class="relative h-64 flex items-center justify-center text-center bg-cover bg-center rounded-b-xl shadow-lg mb-16"
+                 style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x400/27AE60/ffffff?text=Get+In+Touch');">
+            <div class="relative z-10 text-white p-4">
+                <h1 class="text-4xl md:text-5xl font-bold mb-2">Get In Touch With Us</h1>
+                <p class="text-lg md:text-xl">We're here to answer all your questions and help plan your adventure.</p>
+            </div>
+        </section>
+
+        <!-- Contact Form and Info Section -->
+        <section class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="text-3xl font-bold text-primary-blue mb-6">Send Us a Message</h2>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent transition" placeholder="John Doe" required>
+                            <p id="name-error" class="text-red-500 text-xs italic hidden">Please enter your name.</p>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent transition" placeholder="john.doe@example.com" required>
+                            <p id="email-error" class="text-red-500 text-xs italic hidden">Please enter a valid email address.</p>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 text-sm font-bold mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent transition" placeholder="Inquiry about Safari Tour">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="6" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent transition" placeholder="I'm interested in..." required></textarea>
+                            <p id="message-error" class="text-red-500 text-xs italic hidden">Please enter your message.</p>
+                        </div>
+                        <button type="submit" class="bg-primary-orange hover:bg-accent-orange text-white font-bold py-3 px-6 rounded-md focus:outline-none focus:shadow-outline transition duration-300 shadow-md">
+                            Send Message
+                        </button>
+                        <div id="form-message" class="mt-4 text-center text-sm hidden"></div>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h2 class="text-3xl font-bold text-primary-blue mb-6">Contact Information</h2>
+                    <div class="space-y-6 text-gray-700">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary-orange text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-xl text-primary-blue">Our Office</h3>
+                                <p>123 Safari Street, Nairobi, Kenya</p>
+                                <p>P.O. Box 12345-00100, Nairobi</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-primary-orange text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-xl text-primary-blue">Call Us</h3>
+                                <p>+254 700 123 456</p>
+                                <p>+254 711 987 654</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-primary-orange text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-xl text-primary-blue">Email Us</h3>
+                                <p>info@jeslights.com</p>
+                                <p>support@jeslights.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-3xl font-bold text-primary-blue mt-12 mb-6">Follow Us</h2>
+                    <div class="flex space-x-6 text-primary-blue">
+                        <a href="#" class="hover:text-primary-orange transition duration-300 text-4xl"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300 text-4xl"><i class="fab fa-instagram-square"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300 text-4xl"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300 text-4xl"><i class="fab fa-whatsapp-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section (Placeholder) -->
+        <section class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12 text-center">
+            <h2 class="text-3xl font-bold text-primary-blue mb-6">Find Us on the Map</h2>
+            <div class="w-full h-80 bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center">
+                <img src="https://placehold.co/800x400/D1D5DB/6B7280?text=Map+Placeholder" alt="Map of JesLights Office Location" class="w-full h-full object-cover">
+            </div>
+            <p class="text-gray-600 mt-4">Visit our office during business hours for a personalized consultation.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="bg-gray-100 rounded-xl shadow-lg p-6 md:p-8">
+            <h2 class="text-3xl font-bold text-center text-primary-blue mb-10">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-sm p-5 cursor-pointer faq-item" data-faq-id="faq1">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-semibold text-primary-blue text-lg">How do I book a tour?</h3>
+                        <i class="fas fa-chevron-down text-primary-orange transition-transform duration-300 faq-icon"></i>
+                    </div>
+                    <div class="faq-answer hidden mt-3 text-gray-700 leading-relaxed">
+                        You can book a tour directly through our website by navigating to the "Tours" page, selecting your desired tour, and clicking the "Book Now" button. Follow the prompts to complete your booking. Alternatively, you can contact our team for assistance.
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-sm p-5 cursor-pointer faq-item" data-faq-id="faq2">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-semibold text-primary-blue text-lg">What is included in the tour price?</h3>
+                        <i class="fas fa-chevron-down text-primary-orange transition-transform duration-300 faq-icon"></i>
+                    </div>
+                    <div class="faq-answer hidden mt-3 text-gray-700 leading-relaxed">
+                        Each tour's inclusions and exclusions are clearly listed on its individual tour detail page. Generally, our tours include accommodation, meals as specified, park entrance fees, professional guides, and transportation. International flights and visa fees are usually excluded.
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-sm p-5 cursor-pointer faq-item" data-faq-id="faq3">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-semibold text-primary-blue text-lg">Do you offer custom tours?</h3>
+                        <i class="fas fa-chevron-down text-primary-orange transition-transform duration-300 faq-icon"></i>
+                    </div>
+                    <div class="faq-answer hidden mt-3 text-gray-700 leading-relaxed">
+                        Yes, we specialize in creating personalized tour itineraries. If you have specific destinations, activities, or dates in mind, please contact us with your requirements, and our travel experts will design a tailor-made adventure for you.
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-lg shadow-sm p-5 cursor-pointer faq-item" data-faq-id="faq4">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-semibold text-primary-blue text-lg">What are your sustainability practices?</h3>
+                        <i class="fas fa-chevron-down text-primary-orange transition-transform duration-300 faq-icon"></i>
+                    </div>
+                    <div class="faq-answer hidden mt-3 text-gray-700 leading-relaxed">
+                        JesLights is deeply committed to sustainable tourism. We partner with eco-friendly lodges, support local communities through direct engagement and fair practices, minimize environmental impact, and educate our travelers on responsible tourism.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (re-used from index.html, adjusted paths) -->
+    <footer class="bg-primary-blue text-white py-12 rounded-t-xl mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://placehold.co/60x60/F2994A/ffffff?text=JL" alt="JesLights Tours & Travel Logo" class="h-12 mb-4 rounded-full">
+                    <p class="mb-4 text-gray-300">Your trusted partner for unforgettable East African adventures.</p>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Home</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Tours</a></li>
+                        <li><a href="about.html" class="hover:text-primary-orange transition duration-300 text-gray-300">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Tour Types</h3>
+                    <ul class="space-y-2">
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Budget Safari</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Cultural Tours</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Beach Holidays</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Game Drives</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-primary-orange"></i>
+                            <span>123 Safari Street, Nairobi, Kenya</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-primary-orange"></i>
+                            <span>+254 700 123 456</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-primary-orange"></i>
+                            <span>info@jeslights.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 JesLights Tours & Travel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JavaScript -->
+    <script src="../assets/js/global.js"></script>
+    <!-- Contact Page Specific JavaScript -->
+    <script src="../assets/js/contact.js"></script>
+</body>
+</html>
+

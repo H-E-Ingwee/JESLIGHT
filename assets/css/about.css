@@ -1,0 +1,24 @@
+ /* assets/css/about.css */
+
+/*
+    This file is for styles specific to the about.html page.
+    Use it for unique layouts or visual enhancements that are not
+    covered by Tailwind or global.css.
+*/
+
+/* Example: Subtle hover effect for team member cards */
+.team-member-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Ensure images within sections are responsive */
+section img {
+    max-width: 100%;
+    height: auto;
+}
+

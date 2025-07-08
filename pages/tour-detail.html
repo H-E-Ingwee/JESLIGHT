@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Detail - JesLights Tours & Travel</title>
+    <meta name="description" content="Detailed itinerary, pricing, and inclusions for your chosen tour with JesLights Tours & Travel. Get an AI-powered packing list for your adventure!">
+    <meta name="keywords" content="tour details, safari itinerary, cultural tour, beach holiday, game drive, East Africa travel, packing list, AI packing list, JesLights booking">
+    <meta name="author" content="JesLights Tours & Travel">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jeslightstours.com/pages/tour-detail.html?id=X"> <!-- Replace with actual URL and dynamic ID -->
+    <meta property="og:title" content="[Tour Name] - JesLights Tours & Travel"> <!-- Dynamic Title -->
+    <meta property="og:description" content="Detailed information and AI-powered packing list for your [Tour Name] adventure."> <!-- Dynamic Description -->
+    <meta property="og:image" content="https://placehold.co/1200x630/2C3E50/ffffff?text=Tour+Detail"> <!-- Placeholder for social sharing image -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jeslightstours.com/pages/tour-detail.html?id=X"> <!-- Replace with actual URL and dynamic ID -->
+    <meta property="twitter:title" content="[Tour Name] - JesLights Tours & Travel"> <!-- Dynamic Title -->
+    <meta property="twitter:description" content="Detailed information and AI-powered packing list for your [Tour Name] adventure."> <!-- Dynamic Description -->
+    <meta property="twitter:image" content="https://placehold.co/1200x675/F2994A/ffffff?text=Tour+Detail"> <!-- Placeholder for social sharing image -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind CSS configuration to extend theme with custom colors and font
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            orange: '#F2994A',
+                            green: '#27AE60',
+                            blue: '#2C3E50',
+                        },
+                        accent: {
+                            orange: '#FFB366',
+                            green: '#2ECC71',
+                        },
+                        gray: {
+                            50: '#F8F8F8',
+                            100: '#F3F4F6',
+                            200: '#E5E7EB',
+                            300: '#D1D5DB',
+                            400: '#9CA3AF',
+                            500: '#6B7280',
+                            600: '#4B5563',
+                            700: '#374151',
+                            800: '#1F2937',
+                            900: '#111827',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/tour-detail.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Glide.js for image gallery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.min.css">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation (re-used from index.html, adjusted paths) -->
+    <nav class="bg-primary-blue text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/F2994A/ffffff?text=JL" alt="JesLights Tours & Travel Logo" class="h-10 rounded-full">
+                <span class="text-xl font-semibold">JesLights Tours & Travel</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="../index.html" class="hover:text-primary-orange transition duration-300">Home</a>
+                <a href="tours.html" class="hover:text-primary-orange transition duration-300">Tours</a>
+                <a href="about.html" class="hover:text-primary-orange transition duration-300">About Us</a>
+                <a href="contact.html" class="hover:text-primary-orange transition duration-300">Contact</a>
+                <a href="booking-confirm.html" class="bg-primary-orange hover:bg-accent-orange px-4 py-2 rounded-md transition duration-300 shadow-md">Book Now</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary-blue pb-4 px-4">
+            <a href="../index.html" class="block py-2 hover:text-primary-orange transition duration-300">Home</a>
+            <a href="tours.html" class="block py-2 hover:text-primary-orange transition duration-300">Tours</a>
+            <a href="about.html" class="block py-2 hover:text-primary-orange transition duration-300">About Us</a>
+            <a href="contact.html" class="block py-2 hover:text-primary-orange transition duration-300">Contact</a>
+            <a href="booking-confirm.html" class="block mt-2 bg-primary-orange hover:bg-accent-orange px-4 py-2 rounded-md text-center transition duration-300 shadow-md">Book Now</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Tour Header with Image Gallery (Glide.js) -->
+        <section class="relative mb-8">
+            <div class="glide" id="tour-gallery">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides" id="gallery-slides">
+                        <!-- Images will be dynamically loaded here -->
+                        <li class="glide__slide">
+                            <img src="https://placehold.co/1200x600/D1D5DB/6B7280?text=Loading+Image" alt="Loading Tour Image" class="w-full h-[400px] md:h-[500px] object-cover">
+                        </li>
+                    </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left absolute left-4 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition z-10" data-glide-dir="<">
+                        <i class="fas fa-chevron-left text-primary-blue"></i>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right absolute right-4 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition z-10" data-glide-dir=">">
+                        <i class="fas fa-chevron-right text-primary-blue"></i>
+                    </button>
+                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <!-- Bullets will be dynamically loaded here -->
+                </div>
+            </div>
+            
+            <!-- Tour Title Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent py-8 px-4 md:px-8">
+                <div class="container mx-auto">
+                    <h1 id="tour-title-overlay" class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">Loading Tour...</h1>
+                    <div class="flex flex-wrap items-center gap-4 text-white text-sm md:text-base">
+                        <span id="overlay-location" class="flex items-center"><i class="fas fa-map-marker-alt mr-1"></i> Loading Location</span>
+                        <span id="overlay-duration" class="flex items-center"><i class="fas fa-clock mr-1"></i> Loading Duration</span>
+                        <span id="overlay-group-size" class="flex items-center"><i class="fas fa-users mr-1"></i> Group Size: Varies</span>
+                        <span id="overlay-price" class="flex items-center font-bold text-lg md:text-xl"><i class="fas fa-tag mr-1"></i> From $XXX per person</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-4 py-8">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Main Content Area -->
+                <div class="lg:w-2/3">
+                    <!-- Breadcrumbs -->
+                    <div class="flex items-center space-x-2 text-gray-600 mb-6">
+                        <a href="tours.html" class="hover:text-primary-orange transition">Tours</a>
+                        <span>/</span>
+                        <span id="breadcrumb-tour-name" class="font-semibold text-primary-blue">Tour Name</span>
+                    </div>
+
+                    <!-- Tour Overview -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-primary-blue mb-6">Tour Overview</h2>
+                        <p id="tour-overview" class="text-gray-700 leading-relaxed"></p>
+                    </div>
+
+                    <!-- Tour Highlights -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-primary-blue mb-6">Tour Highlights</h2>
+                        <div id="tour-highlights" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <!-- Highlights will be dynamically loaded here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Detailed Itinerary -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-primary-blue mb-6">Detailed Itinerary</h2>
+                        <div id="tour-itinerary" class="space-y-6">
+                            <!-- Itinerary items will be dynamically loaded here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Inclusions/Exclusions -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-primary-blue mb-6">Inclusions & Exclusions</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-xl font-semibold text-primary-green mb-4 flex items-center">
+                                    <i class="fas fa-check-circle mr-2"></i> What's Included
+                                </h3>
+                                <ul id="tour-inclusions" class="space-y-2">
+                                    <!-- Inclusions will be dynamically loaded here -->
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-primary-orange mb-4 flex items-center">
+                                    <i class="fas fa-times-circle mr-2"></i> What's Excluded
+                                </h3>
+                                <ul id="tour-exclusions" class="space-y-2">
+                                    <!-- Exclusions will be dynamically loaded here -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Traveler Reviews -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-primary-blue mb-6">Traveler Reviews</h2>
+                        <div id="tour-reviews" class="space-y-6">
+                            <!-- Reviews will be dynamically loaded here -->
+                            <!-- Placeholder review (will be replaced by JS) -->
+                            <div class="bg-gray-50 p-6 rounded-lg">
+                                <p class="text-gray-600 text-center">Loading reviews...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar Area -->
+                <div class="lg:w-1/3">
+                    <!-- Booking Widget -->
+                    <div class="bg-white p-6 rounded-lg shadow-md sticky top-24 border border-gray-200 mb-8">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-4">Book This Tour</h3>
+                        <p class="text-gray-700 mb-6">From <span id="booking-widget-price" class="text-2xl font-bold text-primary-orange">$XXX</span> per person</p>
+                        
+                        <form id="booking-widget-form">
+                            <div class="space-y-4">
+                                <div>
+                                    <label for="booking-tour-date" class="block text-gray-700 mb-2">Select Date *</label>
+                                    <input type="date" id="booking-tour-date" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-orange">
+                                </div>
+                                
+                                <div>
+                                    <label for="booking-participants" class="block text-gray-700 mb-2">Number of Participants *</label>
+                                    <select id="booking-participants" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-orange">
+                                        <option value="1">1 person</option>
+                                        <option value="2" selected>2 people</option>
+                                        <option value="3">3 people</option>
+                                        <option value="4">4 people</option>
+                                        <option value="5">5 people</option>
+                                        <option value="6">6 people</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="pt-4 border-t border-gray-200">
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-gray-700">Base Price (<span id="base-price-calc">1</span> traveler)</span>
+                                        <span id="base-price-total" class="font-medium">$0</span>
+                                    </div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-gray-700">Estimated Taxes & Fees</span>
+                                        <span id="taxes-total" class="font-medium">$0</span>
+                                    </div>
+                                    <div class="flex justify-between font-semibold text-lg pt-2 border-t border-gray-200">
+                                        <span>Total Estimated</span>
+                                        <span id="booking-total-price">$0</span>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" id="book-now-widget-btn" class="w-full bg-primary-green hover:bg-accent-green text-white py-3 rounded-md font-medium transition shadow-md">
+                                    <i class="fas fa-lock mr-2"></i> Book Now
+                                </button>
+                                
+                                <p class="text-sm text-gray-500 mt-4">* Required fields. Prices in USD. Deposit of 30% required to secure booking.</p>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Quick Facts -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 mb-8">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-4">Quick Facts</h3>
+                        <ul id="quick-facts-list" class="space-y-3">
+                            <!-- Quick facts will be dynamically loaded here -->
+                            <li class="flex items-start">
+                                <i class="fas fa-calendar-alt text-primary-orange mt-1 mr-3"></i>
+                                <span><strong>Duration:</strong> <span id="quick-fact-duration"></span></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-users text-primary-orange mt-1 mr-3"></i>
+                                <span><strong>Group Size:</strong> <span id="quick-fact-group-size"></span></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marked-alt text-primary-orange mt-1 mr-3"></i>
+                                <span><strong>Destinations:</strong> <span id="quick-fact-destinations"></span></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-car text-primary-orange mt-1 mr-3"></i>
+                                <span><strong>Transport:</strong> <span id="quick-fact-transport"></span></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-bed text-primary-orange mt-1 mr-3"></i>
+                                <span><strong>Accommodation:</strong> <span id="quick-fact-accommodation"></span></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-primary-orange mt-1 mr-3"></i>
+                                <span><strong>Meals:</strong> <span id="quick-fact-meals"></span></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-hiking text-primary-orange mt-1 mr-3"></i>
+                                <span><strong>Activity Level:</strong> <span id="quick-fact-activity-level"></span></span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Why Book With Us -->
+                    <div class="bg-primary-blue text-white p-6 rounded-lg shadow-md mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Why Book With JesLights</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary-green mt-1 mr-3"></i>
+                                <span>Best price guarantee</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary-green mt-1 mr-3"></i>
+                                <span>No booking fees</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary-green mt-1 mr-3"></i>
+                                <span>Local experts with 15+ years experience</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary-green mt-1 mr-3"></i>
+                                <span>24/7 customer support</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary-green mt-1 mr-3"></i>
+                                <span>Flexible cancellation policy</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- AI-Powered Packing List Generator -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                        <h2 class="text-2xl font-bold text-primary-blue mb-4">AI Packing List</h2>
+                        <p class="text-gray-700 mb-4">Generate a personalized packing list for this tour based on its type and duration.</p>
+                        <button id="generate-packing-list" class="w-full bg-primary-green hover:bg-accent-green text-white py-3 rounded-md font-semibold transition duration-300 shadow-md flex items-center justify-center">
+                            <i class="fas fa-magic mr-2"></i> Generate Packing List
+                        </button>
+
+                        <div id="packing-list-loading" class="hidden mt-4 text-center text-primary-blue">
+                            <i class="fas fa-spinner fa-spin mr-2"></i> Generating your list...
+                        </div>
+                        
+                        <div id="packing-list-output" class="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200 hidden">
+                            <h3 class="text-xl font-semibold text-primary-blue mb-3">Your Personalized Packing List:</h3>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2" id="packing-list-items">
+                                <!-- Packing list items will be inserted here by JS -->
+                            </ul>
+                            <div id="packing-list-error" class="hidden text-red-600 mt-3">
+                                <i class="fas fa-exclamation-triangle mr-2"></i> Failed to generate packing list. Please try again.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Tours Section -->
+        <section class="container mx-auto px-4 py-16 bg-gray-100 rounded-xl shadow-lg mt-16">
+            <h2 class="text-3xl font-bold text-primary-blue mb-8 text-center">Related Tours You Might Like</h2>
+            <div id="related-tours-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Related Tour Cards will be dynamically loaded here by JS -->
+                <div class="bg-gray-50 p-6 rounded-lg text-center col-span-full">
+                    <p class="text-gray-600">Loading related tours...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (re-used from index.html, adjusted paths) -->
+    <footer class="bg-primary-blue text-white py-12 rounded-t-xl mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://placehold.co/60x60/F2994A/ffffff?text=JL" alt="JesLights Tours & Travel Logo" class="h-12 mb-4 rounded-full">
+                    <p class="mb-4 text-gray-300">Your trusted partner for unforgettable East African adventures.</p>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Home</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Tours</a></li>
+                        <li><a href="about.html" class="hover:text-primary-orange transition duration-300 text-gray-300">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Tour Types</h3>
+                    <ul class="space-y-2">
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Budget Safari</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Cultural Tours</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Beach Holidays</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Game Drives</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-primary-orange"></i>
+                            <span>123 Safari Street, Nairobi, Kenya</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-primary-orange"></i>
+                            <span>+254 700 123 456</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-primary-orange"></i>
+                            <span>info@jeslights.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 JesLights Tours & Travel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JavaScript -->
+    <script src="../assets/js/global.js"></script>
+    <!-- Glide.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js"></script>
+    <!-- Tour Detail Page Specific JavaScript -->
+    <script src="../assets/js/tour-detail.js"></script>
+</body>
+</html>

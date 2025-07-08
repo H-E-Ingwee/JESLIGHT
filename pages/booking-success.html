@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed! - JesLights Tours & Travel</title>
+    <meta name="description" content="Your tour booking with JesLights Tours & Travel is confirmed! Thank you for choosing us for your East African adventure.">
+    <meta name="keywords" content="booking confirmed, tour success, payment success, East Africa travel, JesLights booking, thank you">
+    <meta name="author" content="JesLights Tours & Travel">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jeslightstours.com/pages/booking-success.html"> <!-- Replace with actual URL -->
+    <meta property="og:title" content="Booking Confirmed! - JesLights Tours & Travel">
+    <meta property="og:description" content="Your tour booking with JesLights Tours & Travel is confirmed! Thank you for choosing us.">
+    <meta property="og:image" content="https://placehold.co/1200x630/27AE60/ffffff?text=Booking+Success"> <!-- Placeholder for social sharing image -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jeslightstours.com/pages/booking-success.html"> <!-- Replace with actual URL -->
+    <meta property="twitter:title" content="Booking Confirmed! - JesLights Tours & Travel">
+    <meta property="twitter:description" content="Your tour booking with JesLights Tours & Travel is confirmed! Thank you for choosing us.">
+    <meta property="twitter:image" content="https://placehold.co/1200x675/F2994A/ffffff?text=Trip+Confirmed"> <!-- Placeholder for social sharing image -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind CSS configuration to extend theme with custom colors and font
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            orange: '#F2994A',
+                            green: '#27AE60',
+                            blue: '#2C3E50',
+                        },
+                        accent: {
+                            orange: '#FFB366',
+                            green: '#2ECC71',
+                        },
+                        gray: {
+                            50: '#F8F8F8',
+                            100: '#F3F4F6',
+                            200: '#E5E7EB',
+                            300: '#D1D5DB',
+                            400: '#9CA3AF',
+                            500: '#6B7280',
+                            600: '#4B5563',
+                            700: '#374151',
+                            800: '#1F2937',
+                            900: '#111827',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/booking-success.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation (re-used from index.html, adjusted paths) -->
+    <nav class="bg-primary-blue text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/F2994A/ffffff?text=JL" alt="JesLights Tours & Travel Logo" class="h-10 rounded-full">
+                <span class="text-xl font-semibold">JesLights Tours & Travel</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="../index.html" class="hover:text-primary-orange transition duration-300">Home</a>
+                <a href="tours.html" class="hover:text-primary-orange transition duration-300">Tours</a>
+                <a href="about.html" class="hover:text-primary-orange transition duration-300">About Us</a>
+                <a href="contact.html" class="hover:text-primary-orange transition duration-300">Contact</a>
+                <a href="booking-confirm.html" class="bg-primary-orange hover:bg-accent-orange px-4 py-2 rounded-md transition duration-300 shadow-md">Book Now</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary-blue pb-4 px-4">
+            <a href="../index.html" class="block py-2 hover:text-primary-orange transition duration-300">Home</a>
+            <a href="tours.html" class="block py-2 hover:text-primary-orange transition duration-300">Tours</a>
+            <a href="about.html" class="block py-2 hover:text-primary-orange transition duration-300">About Us</a>
+            <a href="contact.html" class="block py-2 hover:text-primary-orange transition duration-300">Contact</a>
+            <a href="booking-confirm.html" class="block mt-2 bg-primary-orange hover:bg-accent-orange px-4 py-2 rounded-md text-center transition duration-300 shadow-md">Book Now</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8 mb-16">
+        <section class="bg-white rounded-xl shadow-lg p-6 md:p-8 text-center flex flex-col items-center justify-center min-h-[50vh]">
+            <div class="text-primary-green text-6xl mb-6">
+                <i class="fas fa-check-circle animate-bounce-in"></i>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-primary-blue mb-4">Booking Confirmed!</h1>
+            <p class="text-lg md:text-xl text-gray-700 mb-6 max-w-2xl">
+                Thank you for booking your adventure with JesLights Tours & Travel. Your trip is now confirmed!
+                A detailed confirmation email with your itinerary and further instructions has been sent to your email address.
+            </p>
+            <div class="space-y-4 sm:space-y-0 sm:flex sm:space-x-4 mt-8">
+                <a href="../index.html" class="inline-block bg-primary-orange hover:bg-accent-orange text-white font-bold py-3 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-home mr-2"></i> Back to Homepage
+                </a>
+                <a href="contact.html" class="inline-block bg-primary-blue hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-question-circle mr-2"></i> Contact Support
+                </a>
+                <!-- Future: Link to a user's booking history/dashboard -->
+                <!-- <a href="#" class="inline-block bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-6 rounded-full shadow-md transition duration-300">
+                    <i class="fas fa-receipt mr-2"></i> View My Booking
+                </a> -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (re-used from index.html, adjusted paths) -->
+    <footer class="bg-primary-blue text-white py-12 rounded-t-xl mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://placehold.co/60x60/F2994A/ffffff?text=JL" alt="JesLights Tours & Travel Logo" class="h-12 mb-4 rounded-full">
+                    <p class="mb-4 text-gray-300">Your trusted partner for unforgettable East African adventures.</p>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Home</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Tours</a></li>
+                        <li><a href="about.html" class="hover:text-primary-orange transition duration-300 text-gray-300">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Tour Types</h3>
+                    <ul class="space-y-2">
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Budget Safari</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Cultural Tours</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Beach Holidays</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Game Drives</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-primary-orange"></i>
+                            <span>123 Safari Street, Nairobi, Kenya</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-primary-orange"></i>
+                            <span>+254 700 123 456</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-primary-orange"></i>
+                            <span>info@jeslights.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 JesLights Tours & Travel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JavaScript -->
+    <script src="../assets/js/global.js"></script>
+    <!-- Booking Success Page Specific JavaScript -->
+    <script src="../assets/js/booking-success.js"></script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - JesLights Tours & Travel</title>
+    <meta name="description" content="Learn about JesLights Tours & Travel: our story, vision, mission, values (sustainability, local expertise), and meet our dedicated team.">
+    <meta name="keywords" content="About JesLights, Jesca Kinya, tour company history, vision, mission, values, sustainable tourism, East Africa team, local guides">
+    <meta name="author" content="JesLights Tours & Travel">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jeslightstours.com/pages/about.html"> <!-- Replace with actual URL -->
+    <meta property="og:title" content="About Us - JesLights Tours & Travel">
+    <meta property="og:description" content="Learn about JesLights Tours & Travel: our story, vision, mission, values (sustainability, local expertise), and meet our dedicated team.">
+    <meta property="og:image" content="https://placehold.co/1200x630/2C3E50/ffffff?text=About+Us+JesLights"> <!-- Placeholder for social sharing image -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jeslightstours.com/pages/about.html"> <!-- Replace with actual URL -->
+    <meta property="twitter:title" content="About Us - JesLights Tours & Travel">
+    <meta property="twitter:description" content="Learn about JesLights Tours & Travel: our story, vision, mission, values (sustainability, local expertise), and meet our dedicated team.">
+    <meta property="twitter:image" content="https://placehold.co/1200x675/F2994A/ffffff?text=JesLights+Team"> <!-- Placeholder for social sharing image -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind CSS configuration to extend theme with custom colors and font
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            orange: '#F2994A',
+                            green: '#27AE60',
+                            blue: '#2C3E50',
+                        },
+                        accent: {
+                            orange: '#FFB366',
+                            green: '#2ECC71',
+                        },
+                        gray: {
+                            50: '#F8F8F8',
+                            100: '#F3F4F6',
+                            200: '#E5E7EB',
+                            300: '#D1D5DB',
+                            400: '#9CA3AF',
+                            500: '#6B7280',
+                            600: '#4B5563',
+                            700: '#374151',
+                            800: '#1F2937',
+                            900: '#111827',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/about.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation (re-used from index.html, adjusted paths) -->
+    <nav class="bg-primary-blue text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/F2994A/ffffff?text=JL" alt="JesLights Tours & Travel Logo" class="h-10 rounded-full">
+                <span class="text-xl font-semibold">JesLights Tours & Travel</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="../index.html" class="hover:text-primary-orange transition duration-300">Home</a>
+                <a href="tours.html" class="hover:text-primary-orange transition duration-300">Tours</a>
+                <a href="about.html" class="hover:text-primary-orange transition duration-300">About Us</a>
+                <a href="contact.html" class="hover:text-primary-orange transition duration-300">Contact</a>
+                <a href="booking-confirm.html" class="bg-primary-orange hover:bg-accent-orange px-4 py-2 rounded-md transition duration-300 shadow-md">Book Now</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary-blue pb-4 px-4">
+            <a href="../index.html" class="block py-2 hover:text-primary-orange transition duration-300">Home</a>
+            <a href="tours.html" class="block py-2 hover:text-primary-orange transition duration-300">Tours</a>
+            <a href="about.html" class="block py-2 hover:text-primary-orange transition duration-300">About Us</a>
+            <a href="contact.html" class="block py-2 hover:text-primary-orange transition duration-300">Contact</a>
+            <a href="booking-confirm.html" class="block mt-2 bg-primary-orange hover:bg-accent-orange px-4 py-2 rounded-md text-center transition duration-300 shadow-md">Book Now</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8 mb-16">
+        <!-- Hero Section for About Us Page -->
+        <section class="relative h-64 flex items-center justify-center text-center bg-cover bg-center rounded-b-xl shadow-lg mb-16"
+                 style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x400/2C3E50/ffffff?text=About+Us');">
+            <div class="relative z-10 text-white p-4">
+                <h1 class="text-4xl md:text-5xl font-bold mb-2">About JesLights Tours & Travel</h1>
+                <p class="text-lg md:text-xl">Your trusted partner for unforgettable East African adventures.</p>
+            </div>
+        </section>
+
+        <!-- Company Story Section -->
+        <section class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-primary-blue mb-6">Our Story</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        JesLights Tours & Travel was founded by **Jesca Kinya**, a passionate advocate for sustainable tourism and a proud native of East Africa. Growing up amidst the breathtaking landscapes and vibrant cultures of Kenya, Jesca developed a deep appreciation for her homeland and a desire to share its wonders with the world.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Driven by a vision to offer authentic, responsible, and accessible travel experiences, Jesca established JesLights. Our journey began with a commitment to not only showcase the iconic wildlife and stunning natural beauty of East Africa but also to foster meaningful connections between travelers and local communities, ensuring that tourism benefits everyone involved.
+                    </p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x400/F2994A/ffffff?text=Jesca+Kinya" alt="Jesca Kinya, Founder of JesLights" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision & Mission Section -->
+        <section class="bg-gray-100 rounded-xl shadow-lg p-6 md:p-8 mb-12">
+            <h2 class="text-3xl font-bold text-center text-primary-blue mb-10">Our Vision & Mission</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-6 bg-white rounded-lg shadow-sm text-center">
+                    <i class="fas fa-eye text-primary-orange text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-primary-blue mb-3">Our Vision</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        To be the leading and most trusted tour operator in East Africa, renowned for delivering exceptional, authentic, and sustainable travel experiences that inspire and enrich lives.
+                    </p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-sm text-center">
+                    <i class="fas fa-bullseye text-primary-green text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-primary-blue mb-3">Our Mission</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        To craft personalized and unforgettable journeys through East Africa, prioritizing customer satisfaction, promoting responsible tourism, and empowering local communities through genuine cultural exchange.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Values Section -->
+        <section class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12">
+            <h2 class="text-3xl font-bold text-center text-primary-blue mb-10">Our Core Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-sm">
+                    <i class="fas fa-hands-helping text-primary-orange text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-primary-blue">Authenticity</h3>
+                    <p class="text-gray-600">We believe in providing genuine experiences that connect you with the true spirit of East Africa.</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-sm">
+                    <i class="fas fa-seedling text-primary-green text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-primary-blue">Sustainability</h3>
+                    <p class="text-gray-600">Committed to protecting our natural heritage and supporting local communities.</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-sm">
+                    <i class="fas fa-users text-primary-blue text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-primary-blue">Customer Focus</h3>
+                    <p class="text-gray-600">Your satisfaction is our priority; we tailor every journey to your unique needs.</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-sm">
+                    <i class="fas fa-lightbulb text-primary-orange text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-primary-blue">Expertise</h3>
+                    <p class="text-gray-600">Our team possesses deep local knowledge to ensure a seamless and insightful trip.</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-sm">
+                    <i class="fas fa-heart text-primary-green text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-primary-blue">Passion</h3>
+                    <p class="text-gray-600">We are passionate about travel and sharing the magic of East Africa with you.</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-sm">
+                    <i class="fas fa-handshake text-primary-blue text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-primary-blue">Integrity</h3>
+                    <p class="text-gray-600">Operating with transparency, honesty, and respect in all our interactions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet the Team Section -->
+        <section class="bg-gray-100 rounded-xl shadow-lg p-6 md:p-8 mb-12">
+            <h2 class="text-3xl font-bold text-center text-primary-blue mb-10">Meet Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1: Jesca Kinya (Founder) -->
+                <div class="text-center bg-white p-6 rounded-lg shadow-sm">
+                    <img src="https://placehold.co/150x150/D1D5DB/6B7280?text=Jesca" alt="Jesca Kinya" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-primary-blue mb-1">Jesca Kinya</h3>
+                    <p class="text-primary-orange font-medium mb-3">Founder & CEO</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        With a deep love for East Africa and a vision for responsible tourism, Jesca founded JesLights to share authentic travel experiences.
+                    </p>
+                </div>
+                <!-- Team Member 2: David Omondi (Head Guide) -->
+                <div class="text-center bg-white p-6 rounded-lg shadow-sm">
+                    <img src="https://placehold.co/150x150/D1D5DB/6B7280?text=David" alt="David Omondi" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-primary-blue mb-1">David Omondi</h3>
+                    <p class="text-primary-green font-medium mb-3">Head Safari Guide</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        David's extensive knowledge of wildlife and local ecosystems ensures every safari is an educational and thrilling adventure.
+                    </p>
+                </div>
+                <!-- Team Member 3: Aisha Said (Customer Relations) -->
+                <div class="text-center bg-white p-6 rounded-lg shadow-sm">
+                    <img src="https://placehold.co/150x150/D1D5DB/6B7280?text=Aisha" alt="Aisha Said" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-primary-blue mb-1">Aisha Said</h3>
+                    <p class="text-primary-orange font-medium mb-3">Customer Relations Manager</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Aisha ensures every client's journey, from inquiry to departure, is smooth, personalized, and delightful.
+                    </p>
+                </div>
+                <!-- Team Member 4: Michael Kimani (Logistics Coordinator) -->
+                <div class="text-center bg-white p-6 rounded-lg shadow-sm">
+                    <img src="https://placehold.co/150x150/D1D5DB/6B7280?text=Michael" alt="Michael Kimani" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-primary-blue mb-1">Michael Kimani</h3>
+                    <p class="text-primary-green font-medium mb-3">Logistics Coordinator</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Michael's meticulous planning ensures all aspects of your trip, from transport to accommodation, run flawlessly.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-16 bg-primary-green text-white rounded-xl shadow-lg mx-auto container">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Experience East Africa with Us?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Let our passion and expertise guide you to your dream adventure.</p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="tours.html" class="bg-white text-primary-green hover:bg-gray-100 px-6 py-3 rounded-full font-medium transition duration-300 shadow-md">Explore Our Tours</a>
+                    <a href="contact.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary-green px-6 py-3 rounded-full font-medium transition duration-300 shadow-md">Contact Our Team</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (re-used from index.html, adjusted paths) -->
+    <footer class="bg-primary-blue text-white py-12 rounded-t-xl mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://placehold.co/60x60/F2994A/ffffff?text=JL" alt="JesLights Tours & Travel Logo" class="h-12 mb-4 rounded-full">
+                    <p class="mb-4 text-gray-300">Your trusted partner for unforgettable East African adventures.</p>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Home</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Tours</a></li>
+                        <li><a href="about.html" class="hover:text-primary-orange transition duration-300 text-gray-300">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Tour Types</h3>
+                    <ul class="space-y-2">
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Budget Safari</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Cultural Tours</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Beach Holidays</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Game Drives</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-primary-orange"></i>
+                            <span>123 Safari Street, Nairobi, Kenya</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-primary-orange"></i>
+                            <span>+254 700 123 456</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-primary-orange"></i>
+                            <span>info@jeslights.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 JesLights Tours & Travel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JavaScript -->
+    <script src="../assets/js/global.js"></script>
+    <!-- About Us Page Specific JavaScript -->
+    <script src="../assets/js/about.js"></script>
+</body>
+</html>

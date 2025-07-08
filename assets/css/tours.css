@@ -1,0 +1,75 @@
+/* assets/css/tours.css */
+
+/*
+    This file is intended for tours page-specific styles that go beyond
+    Tailwind CSS utility classes or global styles defined in global.css.
+*/
+
+/* Custom styling for the range input thumb (for better cross-browser consistency) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--color-primary-orange);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 0 4px rgba(242, 153, 74, 0.3); /* Accent ring on thumb */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--color-primary-orange);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 0 4px rgba(242, 153, 74, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: var(--color-accent-orange);
+    box-shadow: 0 0 0 6px rgba(242, 153, 74, 0.5);
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    background: var(--color-accent-orange);
+    box-shadow: 0 0 0 6px rgba(242, 153, 74, 0.5);
+}
+
+/* Custom styling for the track */
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    background: var(--color-gray-200);
+    border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    background: var(--color-gray-200);
+    border-radius: 5px;
+}
+
+/* Sticky sidebar for filters on larger screens */
+@media (min-width: 1024px) { /* Tailwind's 'lg' breakpoint */
+    .h-fit.sticky {
+        top: 6rem; /* Adjust based on your fixed header height */
+    }
+}
+
+/* Mobile filter sidebar overlay */
+#filter-sidebar.fixed {
+    animation: slideInFromLeft 0.3s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,39 @@
+/* assets/css/booking-success.css */
+
+/*
+    This file is for styles specific to the booking-success.html page.
+    Use it for any unique animations or layout adjustments for the success message.
+*/
+
+/* Animation for the checkmark icon */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animate-bounce-in {
+    animation: bounceIn 0.8s ease-out forwards;
+}
+
+/* Ensure the content box is vertically centered on the page */
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 10rem); /* Adjust based on header/footer height */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}

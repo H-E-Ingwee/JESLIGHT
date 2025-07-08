@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation - JesLights Tours & Travel</title>
+    <meta name="description" content="Confirm your tour booking with JesLights Tours & Travel. Review your selected tour details and proceed to payment for your East African adventure.">
+    <meta name="keywords" content="tour booking, booking confirmation, payment, East Africa travel, JesLights booking, safari payment, cultural tour booking">
+    <meta name="author" content="JesLights Tours & Travel">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jeslightstours.com/pages/booking-confirm.html"> <!-- Replace with actual URL -->
+    <meta property="og:title" content="Booking Confirmation - JesLights Tours & Travel">
+    <meta property="og:description" content="Confirm your tour booking with JesLights Tours & Travel. Review your selected tour details and proceed to payment.">
+    <meta property="og:image" content="https://placehold.co/1200x630/F2994A/ffffff?text=Booking+Confirm"> <!-- Placeholder for social sharing image -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jeslightstours.com/pages/booking-confirm.html"> <!-- Replace with actual URL -->
+    <meta property="twitter:title" content="Booking Confirmation - JesLights Tours & Travel">
+    <meta property="twitter:description" content="Confirm your tour booking with JesLights Tours & Travel. Review your selected tour details and proceed to payment.">
+    <meta property="twitter:image" content="https://placehold.co/1200x675/27AE60/ffffff?text=Confirm+Your+Trip"> <!-- Placeholder for social sharing image -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind CSS configuration to extend theme with custom colors and font
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            orange: '#F2994A',
+                            green: '#27AE60',
+                            blue: '#2C3E50',
+                        },
+                        accent: {
+                            orange: '#FFB366',
+                            green: '#2ECC71',
+                        },
+                        gray: {
+                            50: '#F8F8F8',
+                            100: '#F3F4F6',
+                            200: '#E5E7EB',
+                            300: '#D1D5DB',
+                            400: '#9CA3AF',
+                            500: '#6B7280',
+                            600: '#4B5563',
+                            700: '#374151',
+                            800: '#1F2937',
+                            900: '#111827',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/booking-confirm.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation (re-used from index.html, adjusted paths) -->
+    <nav class="bg-primary-blue text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/F2994A/ffffff?text=JL" alt="JesLights Tours & Travel Logo" class="h-10 rounded-full">
+                <span class="text-xl font-semibold">JesLights Tours & Travel</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="../index.html" class="hover:text-primary-orange transition duration-300">Home</a>
+                <a href="tours.html" class="hover:text-primary-orange transition duration-300">Tours</a>
+                <a href="about.html" class="hover:text-primary-orange transition duration-300">About Us</a>
+                <a href="contact.html" class="hover:text-primary-orange transition duration-300">Contact</a>
+                <a href="booking-confirm.html" class="bg-primary-orange hover:bg-accent-orange px-4 py-2 rounded-md transition duration-300 shadow-md">Book Now</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary-blue pb-4 px-4">
+            <a href="../index.html" class="block py-2 hover:text-primary-orange transition duration-300">Home</a>
+            <a href="tours.html" class="block py-2 hover:text-primary-orange transition duration-300">Tours</a>
+            <a href="about.html" class="block py-2 hover:text-primary-orange transition duration-300">About Us</a>
+            <a href="contact.html" class="block py-2 hover:text-primary-orange transition duration-300">Contact</a>
+            <a href="booking-confirm.html" class="block mt-2 bg-primary-orange hover:bg-accent-orange px-4 py-2 rounded-md text-center transition duration-300 shadow-md">Book Now</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8 mb-16">
+        <!-- Hero Section for Booking Confirmation Page -->
+        <section class="relative h-64 flex items-center justify-center text-center bg-cover bg-center rounded-b-xl shadow-lg mb-16"
+                 style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x400/F2994A/ffffff?text=Confirm+Your+Booking');">
+            <div class="relative z-10 text-white p-4">
+                <h1 class="text-4xl md:text-5xl font-bold mb-2">Confirm Your Booking</h1>
+                <p class="text-lg md:text-xl">Review your details before proceeding to payment.</p>
+            </div>
+        </section>
+
+        <!-- Booking Summary Section -->
+        <section class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12">
+            <h2 class="text-3xl font-bold text-primary-blue mb-6 text-center">Your Booking Summary</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Tour Details -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-primary-blue mb-4">Tour Details</h3>
+                    <div class="space-y-3 text-gray-700">
+                        <p><span class="font-medium">Tour Name:</span> <span id="summary-tour-name">Loading...</span></p>
+                        <p><span class="font-medium">Destination:</span> East Africa</p>
+                        <p><span class="font-medium">Duration:</span> <span id="summary-tour-duration">Loading...</span></p>
+                        <p><span class="font-medium">Departure Date:</span> <span id="summary-departure-date">Loading...</span></p>
+                        <p><span class="font-medium">Number of Travelers:</span> <span id="summary-travelers">Loading...</span></p>
+                    </div>
+                </div>
+
+                <!-- Traveler Details -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-primary-blue mb-4">Traveler Details</h3>
+                    <div class="space-y-3 text-gray-700">
+                        <p><span class="font-medium">Lead Traveler:</span> <span id="summary-lead-traveler">Loading...</span></p>
+                        <p><span class="font-medium">Email:</span> <span id="summary-email">Loading...</span></p>
+                        <p><span class="font-medium">Phone:</span> <span id="summary-phone">Loading...</span></p>
+                        <p><span class="font-medium">Special Requests:</span> <span id="summary-special-requests">Loading...</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-gray-200 my-8">
+
+            <!-- Price Breakdown -->
+            <div class="max-w-md mx-auto bg-gray-50 p-6 rounded-lg shadow-inner">
+                <h3 class="text-2xl font-semibold text-primary-blue mb-4 text-center">Price Breakdown</h3>
+                <div class="flex justify-between items-center text-gray-700 mb-2">
+                    <span>Tour Price per person:</span>
+                    <span id="price-per-person" class="font-medium">$0.00</span>
+                </div>
+                <div class="flex justify-between items-center text-gray-700 mb-2">
+                    <span>Number of Travelers:</span>
+                    <span id="num-travelers" class="font-medium">0</span>
+                </div>
+                <div class="flex justify-between items-center text-gray-700 mb-2">
+                    <span>Subtotal:</span>
+                    <span id="subtotal" class="font-medium">$0.00</span>
+                </div>
+                <div class="flex justify-between items-center text-gray-700 mb-2">
+                    <span>Taxes & Fees (5%):</span>
+                    <span id="taxes-fees" class="font-medium">$0.00</span>
+                </div>
+                <div class="flex justify-between items-center text-primary-blue font-bold text-xl mt-4 pt-4 border-t border-gray-300">
+                    <span>Total Amount Due:</span>
+                    <span id="total-amount" class="text-primary-orange">$0.00</span>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <p class="text-gray-700 mb-6">
+                    By clicking "Proceed to Payment", you agree to our <a href="#" class="text-primary-orange hover:underline">Terms and Conditions</a>.
+                </p>
+                <button id="proceed-to-payment-btn" class="bg-primary-green hover:bg-accent-green text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transition duration-300 transform hover:scale-105">
+                    Proceed to Payment
+                </button>
+                <div id="payment-message" class="mt-6 text-lg hidden">
+                    <!-- Payment processing message will appear here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Method Selection Section -->
+        <section class="bg-gray-100 rounded-xl shadow-lg p-6 md:p-8 mb-12">
+            <h2 class="text-3xl font-bold text-primary-blue mb-6 text-center">Choose Your Payment Method</h2>
+            <div class="max-w-2xl mx-auto space-y-6">
+                <!-- Credit Card Option -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="payment-method" value="credit-card" class="form-radio h-5 w-5 text-primary-orange" checked>
+                        <span class="ml-3 text-xl font-semibold text-primary-blue">Credit/Debit Card</span>
+                        <div class="ml-auto flex space-x-2 text-3xl payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                        </div>
+                    </label>
+                    <div id="credit-card-details" class="mt-4 space-y-4">
+                        <div>
+                            <label for="card-number" class="block text-gray-700 text-sm font-bold mb-2">Card Number</label>
+                            <input type="text" id="card-number" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent transition" placeholder="XXXX XXXX XXXX XXXX">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="expiry-date" class="block text-gray-700 text-sm font-bold mb-2">Expiry Date (MM/YY)</label>
+                                <input type="text" id="expiry-date" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent transition" placeholder="MM/YY">
+                            </div>
+                            <div>
+                                <label for="cvv" class="block text-gray-700 text-sm font-bold mb-2">CVV</label>
+                                <input type="text" id="cvv" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent transition" placeholder="123">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="card-name" class="block text-gray-700 text-sm font-bold mb-2">Name on Card</label>
+                            <input type="text" id="card-name" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent transition" placeholder="John Doe">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Money Option (e.g., M-Pesa for Kenya) -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="payment-method" value="mobile-money" class="form-radio h-5 w-5 text-primary-orange">
+                        <span class="ml-3 text-xl font-semibold text-primary-blue">Mobile Money (M-Pesa, Airtel Money)</span>
+                        <div class="ml-auto flex space-x-2 text-3xl payment-icons">
+                            <i class="fas fa-mobile-alt"></i>
+                            <!-- You might add specific mobile money logos here if available -->
+                        </div>
+                    </label>
+                    <div id="mobile-money-details" class="mt-4 space-y-4 hidden">
+                        <p class="text-gray-700">Instructions for Mobile Money payment:</p>
+                        <ol class="list-decimal list-inside text-gray-700 space-y-1">
+                            <li>Go to M-Pesa / Airtel Money menu on your phone.</li>
+                            <li>Select "Lipa Na M-Pesa" or "Pay Bill".</li>
+                            <li>Enter Business No: <span class="font-bold text-primary-blue">XXXXXX</span></li>
+                            <li>Enter Account No: <span class="font-bold text-primary-blue">YourBookingID</span> (This would be generated by backend)</li>
+                            <li>Enter Amount: <span id="mobile-money-amount" class="font-bold text-primary-orange"></span></li>
+                            <li>Enter your M-Pesa / Airtel Money PIN.</li>
+                            <li>You will receive a confirmation SMS.</li>
+                        </ol>
+                        <div>
+                            <label for="mobile-money-phone" class="block text-gray-700 text-sm font-bold mb-2">Your Mobile Money Number</label>
+                            <input type="tel" id="mobile-money-phone" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent transition" placeholder="+254 7XX XXX XXX">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bank Transfer Option -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="payment-method" value="bank-transfer" class="form-radio h-5 w-5 text-primary-orange">
+                        <span class="ml-3 text-xl font-semibold text-primary-blue">Bank Transfer</span>
+                        <div class="ml-auto flex space-x-2 text-3xl payment-icons">
+                            <i class="fas fa-bank"></i>
+                        </div>
+                    </label>
+                    <div id="bank-transfer-details" class="mt-4 space-y-4 hidden">
+                        <p class="text-gray-700">Please make a direct bank transfer to our account:</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Bank Name: <span class="font-bold text-primary-blue">Example Bank PLC</span></li>
+                            <li>Account Name: <span class="font-bold text-primary-blue">JesLights Tours & Travel Ltd.</span></li>
+                            <li>Account Number: <span class="font-bold text-primary-blue">XXXXXXXXXXXXX</span></li>
+                            <li>SWIFT/BIC Code: <span class="font-bold text-primary-blue">EXAMPLXXXX</span></li>
+                            <li>Reference: <span class="font-bold text-primary-blue">YourBookingID</span> (This would be generated by backend)</li>
+                        </ul>
+                        <p class="text-red-600 text-sm italic mt-2">Please note: Bank transfers may take 2-5 business days to clear. Your booking will be confirmed upon receipt of payment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (re-used from index.html, adjusted paths) -->
+    <footer class="bg-primary-blue text-white py-12 rounded-t-xl mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://placehold.co/60x60/F2994A/ffffff?text=JL" alt="JesLights Tours & Travel Logo" class="h-12 mb-4 rounded-full">
+                    <p class="mb-4 text-gray-300">Your trusted partner for unforgettable East African adventures.</p>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Home</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Tours</a></li>
+                        <li><a href="about.html" class="hover:text-primary-orange transition duration-300 text-gray-300">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Tour Types</h3>
+                    <ul class="space-y-2">
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Budget Safari</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Cultural Tours</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Beach Holidays</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Game Drives</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-primary-orange"></i>
+                            <span>123 Safari Street, Nairobi, Kenya</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-primary-orange"></i>
+                            <span>+254 700 123 456</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-primary-orange"></i>
+                            <span>info@jeslights.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 JesLights Tours & Travel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JavaScript -->
+    <script src="../assets/js/global.js"></script>
+    <!-- Booking Confirmation Page Specific JavaScript -->
+    <script src="../assets/js/booking-confirm.js"></script>
+</body>
+</html>

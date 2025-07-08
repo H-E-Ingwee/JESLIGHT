@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Tour - JesLights Tours & Travel</title>
+    <meta name="description" content="Complete your tour booking with JesLights Tours & Travel. Provide traveler details, select dates, and prepare for your East African adventure.">
+    <meta name="keywords" content="book tour, travel booking form, East Africa tour reservation, JesLights booking, safari booking, cultural tour reservation">
+    <meta name="author" content="JesLights Tours & Travel">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jeslightstours.com/pages/booking-form.html"> <!-- Replace with actual URL -->
+    <meta property="og:title" content="Book Your Tour - JesLights Tours & Travel">
+    <meta property="og:description" content="Complete your tour booking with JesLights Tours & Travel. Provide traveler details and select dates.">
+    <meta property="og:image" content="https://placehold.co/1200x630/2C3E50/ffffff?text=Book+Your+Trip"> <!-- Placeholder for social sharing image -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jeslightstours.com/pages/booking-form.html"> <!-- Replace with actual URL -->
+    <meta property="twitter:title" content="Book Your Tour - JesLights Tours & Travel">
+    <meta property="twitter:description" content="Complete your tour booking with JesLights Tours & Travel. Provide traveler details and select dates.">
+    <meta property="twitter:image" content="https://placehold.co/1200x675/F2994A/ffffff?text=Booking+Form"> <!-- Placeholder for social sharing image -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind CSS configuration to extend theme with custom colors and font
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            orange: '#F2994A',
+                            green: '#27AE60',
+                            blue: '#2C3E50',
+                        },
+                        accent: {
+                            orange: '#FFB366',
+                            green: '#2ECC71',
+                        },
+                        gray: {
+                            50: '#F8F8F8',
+                            100: '#F3F4F6',
+                            200: '#E5E7EB',
+                            300: '#D1D5DB',
+                            400: '#9CA3AF',
+                            500: '#6B7280',
+                            600: '#4B5563',
+                            700: '#374151',
+                            800: '#1F2937',
+                            900: '#111827',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/booking-form.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation (re-used from index.html, adjusted paths) -->
+    <nav class="bg-primary-blue text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/F2994A/ffffff?text=JL" alt="JesLights Tours & Travel Logo" class="h-10 rounded-full">
+                <span class="text-xl font-semibold">JesLights Tours & Travel</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="../index.html" class="hover:text-primary-orange transition duration-300">Home</a>
+                <a href="tours.html" class="hover:text-primary-orange transition duration-300">Tours</a>
+                <a href="about.html" class="hover:text-primary-orange transition duration-300">About Us</a>
+                <a href="contact.html" class="hover:text-primary-orange transition duration-300">Contact</a>
+                <a href="booking-confirm.html" class="bg-primary-orange hover:bg-accent-orange px-4 py-2 rounded-md transition duration-300 shadow-md">Book Now</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary-blue pb-4 px-4">
+            <a href="../index.html" class="block py-2 hover:text-primary-orange transition duration-300">Home</a>
+            <a href="tours.html" class="block py-2 hover:text-primary-orange transition duration-300">Tours</a>
+            <a href="about.html" class="block py-2 hover:text-primary-orange transition duration-300">About Us</a>
+            <a href="contact.html" class="block py-2 hover:text-primary-orange transition duration-300">Contact</a>
+            <a href="booking-confirm.html" class="block mt-2 bg-primary-orange hover:bg-accent-orange px-4 py-2 rounded-md text-center transition duration-300 shadow-md">Book Now</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8 mb-16">
+        <!-- Hero Section for Booking Form Page -->
+        <section class="relative h-64 flex items-center justify-center text-center bg-cover bg-center rounded-b-xl shadow-lg mb-16"
+                 style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x400/27AE60/ffffff?text=Book+Your+Adventure');">
+            <div class="relative z-10 text-white p-4">
+                <h1 class="text-4xl md:text-5xl font-bold mb-2">Book Your Adventure</h1>
+                <p class="text-lg md:text-xl">Fill in your details to secure your spot.</p>
+            </div>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12 max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-primary-blue mb-6 text-center">Traveler & Tour Details</h2>
+            
+            <form id="booking-form" class="space-y-6">
+                <!-- Hidden input for Tour ID -->
+                <input type="hidden" id="tour-id" name="tourId">
+                <input type="hidden" id="tour-name-hidden" name="tourNameHidden">
+                <input type="hidden" id="tour-price-hidden" name="tourPriceHidden">
+                <input type="hidden" id="tour-duration-hidden" name="tourDurationHidden">
+
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-6">
+                    <h3 class="text-xl font-semibold text-primary-blue mb-2">Selected Tour: <span id="selected-tour-display" class="text-primary-orange">Loading...</span></h3>
+                    <p class="text-gray-700"><span id="selected-tour-duration-display"></span> | Price from: <span id="selected-tour-price-display"></span></p>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-primary-blue mb-4">Your Details</h3>
+                <div>
+                    <label for="lead-traveler-name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="lead-traveler-name" name="leadTravelerName" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent transition" placeholder="John Doe" required>
+                    <p id="lead-traveler-name-error" class="text-red-500 text-xs italic hidden">Please enter your full name.</p>
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent transition" placeholder="john.doe@example.com" required>
+                    <p id="email-error" class="text-red-500 text-xs italic hidden">Please enter a valid email address.</p>
+                </div>
+                <div>
+                    <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent transition" placeholder="+254 7XX XXX XXX" required>
+                    <p id="phone-error" class="text-red-500 text-xs italic hidden">Please enter a valid phone number.</p>
+                </div>
+                <div>
+                    <label for="num-travelers" class="block text-gray-700 text-sm font-bold mb-2">Number of Travelers</label>
+                    <input type="number" id="num-travelers" name="numTravelers" min="1" value="1" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent transition" required>
+                    <p id="num-travelers-error" class="text-red-500 text-xs italic hidden">Please enter at least 1 traveler.</p>
+                </div>
+                <div>
+                    <label for="departure-date" class="block text-gray-700 text-sm font-bold mb-2">Preferred Departure Date</label>
+                    <input type="date" id="departure-date" name="departureDate" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent transition" required>
+                    <p id="departure-date-error" class="text-red-500 text-xs italic hidden">Please select a departure date.</p>
+                </div>
+                <div>
+                    <label for="special-requests" class="block text-gray-700 text-sm font-bold mb-2">Special Requests (Optional)</label>
+                    <textarea id="special-requests" name="specialRequests" rows="4" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent transition" placeholder="e.g., dietary restrictions, specific interests"></textarea>
+                </div>
+                
+                <div class="flex items-center">
+                    <input type="checkbox" id="terms-agree" name="termsAgree" class="form-checkbox h-5 w-5 text-primary-orange rounded focus:ring-primary-orange" required>
+                    <label for="terms-agree" class="ml-2 text-gray-700 text-sm">
+                        I agree to the <a href="#" class="text-primary-orange hover:underline">Terms and Conditions</a> and <a href="#" class="text-primary-orange hover:underline">Privacy Policy</a>.
+                    </label>
+                    <p id="terms-agree-error" class="text-red-500 text-xs italic hidden">You must agree to the terms.</p>
+                </div>
+
+                <button type="submit" class="w-full bg-primary-orange hover:bg-accent-orange text-white font-bold py-3 px-6 rounded-md focus:outline-none focus:shadow-outline transition duration-300 shadow-md">
+                    Proceed to Confirmation
+                </button>
+                <div id="form-submission-message" class="mt-4 text-center text-sm hidden"></div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer (re-used from index.html, adjusted paths) -->
+    <footer class="bg-primary-blue text-white py-12 rounded-t-xl mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://placehold.co/60x60/F2994A/ffffff?text=JL" alt="JesLights Tours & Travel Logo" class="h-12 mb-4 rounded-full">
+                    <p class="mb-4 text-gray-300">Your trusted partner for unforgettable East African adventures.</p>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-primary-orange transition duration-300"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Home</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Tours</a></li>
+                        <li><a href="about.html" class="hover:text-primary-orange transition duration-300 text-gray-300">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Tour Types</h3>
+                    <ul class="space-y-2">
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Budget Safari</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Cultural Tours</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Beach Holidays</a></li>
+                        <li><a href="tours.html" class="hover:text-primary-orange transition duration-300 text-gray-300">Game Drives</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-primary-orange"></i>
+                            <span>123 Safari Street, Nairobi, Kenya</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-primary-orange"></i>
+                            <span>+254 700 123 456</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-primary-orange"></i>
+                            <span>info@jeslights.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 JesLights Tours & Travel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JavaScript -->
+    <script src="../assets/js/global.js"></script>
+    <!-- Booking Form Page Specific JavaScript -->
+    <script src="../assets/js/booking-form.js"></script>
+</body>
+</html>
